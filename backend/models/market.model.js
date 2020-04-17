@@ -14,28 +14,30 @@ const marketSchema = new Schema(
             },
         ItemName:
             {
-                Type: String,
+                type: String,
                 required: true,
-                trim: true
+                trim: true,
+
             },
         URL:
             {
                 type: String,
                 required: true,
-                trim: true
-
+                trim: true,
             },
         Description:
             {
                 type: String,
                 required: true,
-                trim: true
-            }
+                trim: true,
+            },
     },
     {
         timestamps: true,
     });
 
-const User = mongoose.model('Market', marketSchema);
+
+const Market = mongoose.model('Market', marketSchema);
+
 
 module.exports = Market;

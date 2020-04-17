@@ -14,26 +14,28 @@ const itemSchema = new Schema(
             },
         ItemName:
             {
-                Type: String,
+                type: String,
                 required: true,
-                trim: true
+                trim: true,
             },
         Price:
             {
-                Type: Number,
-                trim: true
+                type: Number,
+                required: true,
+                trim: true,
             },
-        SellerId:
+        SellerID:
             {
-                Type: String,
+                type: String,
+                required: true,
                 trim: true
             },
         SaleNum:
             {
-                Type: Number,
-                trim: true
-
-            }
+                type: Number,
+                required: true,
+                trim: true,
+            },
     },
 
     {
