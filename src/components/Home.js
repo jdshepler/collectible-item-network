@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export class Home extends Component {
   render() {
     return (
-      <div class="body">
+      <div>
         <h1>Hello, world!</h1>
         <p>Welcome to the development build of the Collectible Item Network!</p>
 

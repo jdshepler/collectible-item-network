@@ -14,6 +14,8 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import AddCircleIcon from '@material-ui/icons/AddCircle';
+import Link from '@material-ui/core/Link';
 
 const useStyles = makeStyles((theme) => ({
     grow: {
@@ -115,8 +117,14 @@ export default function PrimarySearchAppBar() {
             open={isMenuOpen}
             onClose={handleMenuClose}
         >
-            <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-            <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+            <Link href={'/sign-in'} style={{textDecoration: 'none', color: 'inherit'}}>
+                <MenuItem onClick={handleMenuClose}>Sign In</MenuItem>
+            </Link>
+
+            <Link href={'/sign-up'} style={{textDecoration: 'none', color: 'inherit'}}>
+                <MenuItem onClick={handleMenuClose}>Sign Up</MenuItem>
+            </Link>
+
         </Menu>
     );
 
@@ -174,7 +182,7 @@ export default function PrimarySearchAppBar() {
                         <MenuIcon />
                     </IconButton>
                     <Typography className={classes.title} variant="h6" noWrap>
-                        Material-UI
+                        Collectible Items Network
                     </Typography>
                     <div className={classes.search}>
                         <div className={classes.searchIcon}>
@@ -189,6 +197,17 @@ export default function PrimarySearchAppBar() {
                             inputProps={{ 'aria-label': 'search' }}
                         />
                     </div>
+                        <IconButton edge="start"
+                                    color= "inherit"
+                                    aria-label="open drawer">
+                            {/*<Link href="/sign-in" style={{ textDecoration: 'none', color: 'white' }}>*/}
+                            {/*    <AddCircleIcon />*/}
+                            {/*</Link>*/}
+                            <Link href="/AddItem" >
+                                <AddCircleIcon style={{color: 'white' }}/>
+                            </Link>
+
+                        </IconButton>
                     <div className={classes.grow} />
                     <div className={classes.sectionDesktop}>
                         <IconButton aria-label="show 4 new mails" color="inherit">

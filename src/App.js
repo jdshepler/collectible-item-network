@@ -5,6 +5,7 @@ import { Counter } from './components/Counter';
 import Nav from './components/Nav';
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
+import AddItem from "./components/AddItem";
 import './containers/App.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
                     <Route path='/sign-in' component={SignIn} />
                     <Route path='/sign-up' component={SignUp} />
                     <Route path='/counter' component={Counter} />
+                    <Route path='/additem' component={AddItem} />
                 </Switch>
             </div>
         </Router>

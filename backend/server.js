@@ -2,6 +2,8 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 
+const ATLAS_URI = 'mongodb+srv://CINTeam:CINTeam@cluster0-m5geq.mongodb.net/test?retryWrites=true&w=majority'
+
 require('dotenv').config();
 
 const app = express();
