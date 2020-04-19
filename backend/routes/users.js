@@ -8,18 +8,53 @@ router.route('/').get((req, res) => {
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
+<<<<<<< HEAD
 router.route('/add').post((req, res) => {
     // try {
     //     const hashedPassword = await bcrypt.hash(req.body.password, 10)
     //     console.log(hashedPassword)
     // }
     const username = req.body.username;
+=======
+router.route('/add').post((req, res) =>
+{
+    const userID = req.body.userID;
+    const password = req.body.password;
+    const role = req.body.role;
+    const shippingAddress = req.body.shippingAddress;
+>>>>>>> e3619fa0735e1b7aaf4571914e8fbd524768fed4
 
-    const newUser = new User({username});
+    const newUser = new User(
+        {
+            userID,
+            password,
+            role,
+            shippingAddress,
+        });
 
     newUser.save()
         .then(() => res.json('User added!'))
         .catch(err => res.status(400).json('Error: ' + err))
+});
+router.route('/update/:id').post((req, res) => {
+    User.findById(req.params.id)
+        .then(item => {
+            item.userID = req.body.userID;
+            item.password = req.body.password;
+            item.role = req.body.role;
+            item.shippingAddress = req.body.shippingAddress;
+
+            item.save()
+                .then(() => res.json('User updated!'))
+                .catch(err => res.status(400).json('Error: ' + err));
+        })
+        .catch(err => res.status(400).json('Error: ' + err));
+});
+
+router.route('/:id').delete((req, res) => {
+    User.findByIdAndDelete(req.params.id)
+        .then(() => res.json('User deleted.'))
+        .catch(err => res.status(400).json('Error: ' + err));
 });
 
 router.route('/login').post((req, res) => {

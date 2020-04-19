@@ -2,40 +2,42 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const userSchema = new Schema(
+const marketSchema = new Schema(
     {
-        userID: // unique key for thse user database
+        ItemID:
             {
                 type: String,
                 required: true,
                 unique: true,
-                minlength: 3,
-                trim: true,
+                minlength: 4,
+                trim: true
             },
-        password:
+        ItemName:
             {
                 type: String,
                 required: true,
                 trim: true,
-                minLength: 6, // password has to be at least six characters long
+
             },
-        role:
+        URL:
             {
                 type: String,
                 required: true,
                 trim: true,
             },
-        shippingAddress:
+        Description:
             {
-                trim: true,
                 type: String,
                 required: true,
-            }
+                trim: true,
+            },
     },
     {
         timestamps: true,
     });
 
-const User = mongoose.model('User', userSchema);
 
-module.exports = User;
+const Market = mongoose.model('Market', marketSchema);
+
+
+module.exports = Market;

@@ -8,18 +8,18 @@ router.route('/').get((req, res) => {
 });
 
 router.route('/add').post((req, res) => {
-    const username = req.body.username;
-    const name = req.body.name;
-    const description = req.body.description;
-    const model = req.body.model;
-    const year = Number(req.body.year);
+    const ItemID = req.body.ItemID;
+    const ItemName = req.body.ItemName;
+    const Price = Number(req.body.Price);
+    const SellerID = req.body.SellerID;
+    const SaleNum = Number(req.body.SaleNum);
 
     const newItem = new Item({
-        username,
-        name,
-        description,
-        model,
-        year,
+        ItemID,
+        ItemName,
+        Price,
+        SellerID,
+        SaleNum,
     });
 
     newItem.save()
@@ -42,11 +42,11 @@ router.route('/:id').delete((req, res) => {
 router.route('/update/:id').post((req, res) => {
     Item.findById(req.params.id)
         .then(item => {
-            item.username = req.body.username;
-            item.name = req.body.name;
-            item.description = req.body.description;
-            item.model = req.body.model;
-            item.year = Number(req.body.year);
+            item.ItemID = req.body.ItemID;
+            item.ItemName = req.body.ItemName;
+            item.Price = req.body.Price;
+            item.SellerID = req.body.SellerID;
+            item.SaleNum = Number(req.body.SaleNum);
 
             item.save()
                 .then(() => res.json('Item updated!'))
