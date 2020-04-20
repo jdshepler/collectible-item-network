@@ -4,14 +4,19 @@ const Schema = mongoose.Schema;
 
 const userSchema = new Schema(
     {
-        userID: // unique key for thse user database
-            {
-                type: String,
-                required: true,
-                unique: true,
-                minlength: 3,
-                trim: true,
-            },
+        firstName: {
+            type: String,
+            required: true,
+        },
+        lastName: {
+            type: String,
+            required: true,
+        },
+        email: {
+            type: String,
+            required: true,
+            unique: true,
+        },
         password:
             {
                 type: String,
@@ -19,17 +24,25 @@ const userSchema = new Schema(
                 trim: true,
                 minLength: 6, // password has to be at least six characters long
             },
+        userID: // unique key for the user database
+            {
+                type: String,
+                //required: true,
+                unique: true,
+                minlength: 3,
+                trim: true,
+            },
         role:
             {
                 type: String,
-                required: true,
+                //required: true,
                 trim: true,
             },
         shippingAddress:
             {
                 trim: true,
                 type: String,
-                required: true,
+                //required: true,
             }
     },
     {

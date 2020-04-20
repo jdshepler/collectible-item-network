@@ -12,6 +12,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import axios from 'axios';
+import styled from 'styled-components';
 //import bcrypt from 'bcrypt';
 
 export default class SignUp extends Component{
@@ -76,20 +77,31 @@ export default class SignUp extends Component{
 
 
     render() {
+
+        const PaperDiv = styled.div`
+            background: linear-gradient(rgba(255,255,255, 1), rgba(255,255,255,.8));
+            margin: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px;
+        `;
+
         return (
-            <Container component="main" maxWidth="xs" >
+            <Container component="main" maxWidth="sm" >
                 <CssBaseline/>
-                    <div>
+                    <PaperDiv>
                         <Avatar >
                             <LockOutlinedIcon/>
                         </Avatar>
                         <Typography component="h1" variant="h5">
                             Sign up
                         </Typography>
-                        <form onSubmit={this.onSubmit}>
+                        <form onSubmit={this.onSubmit} style={{margin:'10px'}}>
                             <Grid container spacing={2}>
                                 <Grid item xs={12} sm={6}>
                                     <TextField
+                                        autoFocus
                                         autoComplete="fname"
                                         name="firstName"
                                         variant="outlined"
@@ -97,8 +109,7 @@ export default class SignUp extends Component{
                                         fullWidth
                                         id="firstName"
                                         label="First Name"
-                                        autoFocus
-                                        value={this.state.firstName}
+                                        defaultValue={this.state.firstName}
                                         onChange={this.onChangeFirstName}
                                     />
                                 </Grid>
@@ -111,7 +122,7 @@ export default class SignUp extends Component{
                                         label="Last Name"
                                         name="lastName"
                                         autoComplete="lname"
-                                        value={this.state.lastName}
+                                        defaultValue={this.state.lastName}
                                         onChange={this.onChangeLastName}
                                     />
                                 </Grid>
@@ -124,7 +135,7 @@ export default class SignUp extends Component{
                                         label="Email Address"
                                         name="email"
                                         autoComplete="email"
-                                        value={this.state.email}
+                                        defaultValue={this.state.email}
                                         onChange={this.onChangeEmail}
                                     />
                                 </Grid>
@@ -138,7 +149,7 @@ export default class SignUp extends Component{
                                         type="password"
                                         id="password"
                                         autoComplete="current-password"
-                                        value={this.state.password}
+                                        defaultValue={this.state.password}
                                         onChange={this.onChangePassword}
                                     />
                                 </Grid>
@@ -154,6 +165,7 @@ export default class SignUp extends Component{
                                 fullWidth
                                 variant="contained"
                                 color="primary"
+                                style={{margin:'10px 0px'}}
                             >
                                 Sign Up
                             </Button>
@@ -165,7 +177,7 @@ export default class SignUp extends Component{
                                 </Grid>
                             </Grid>
                         </form>
-                    </div>
+                    </PaperDiv>
                 <Box mt={5}>
                     <Typography variant="body2" color="textSecondary" align="center">
                         {'Copyright © '}

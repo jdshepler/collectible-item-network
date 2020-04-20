@@ -8,24 +8,21 @@ router.route('/').get((req, res) => {
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
-<<<<<<< HEAD
-router.route('/add').post((req, res) => {
-    // try {
-    //     const hashedPassword = await bcrypt.hash(req.body.password, 10)
-    //     console.log(hashedPassword)
-    // }
-    const username = req.body.username;
-=======
 router.route('/add').post((req, res) =>
 {
+    const firstName = req.body.firstName;
+    const lastName = req.body.lastName;
+    const email = req.body.email;
     const userID = req.body.userID;
     const password = req.body.password;
     const role = req.body.role;
     const shippingAddress = req.body.shippingAddress;
->>>>>>> e3619fa0735e1b7aaf4571914e8fbd524768fed4
 
     const newUser = new User(
         {
+            firstName,
+            lastName,
+            email,
             userID,
             password,
             role,
@@ -58,7 +55,7 @@ router.route('/:id').delete((req, res) => {
 });
 
 router.route('/login').post((req, res) => {
-    const user = users.find(user => user.name === req.body.name)
+    const user = User.find(user => user.name === req.body.name)
     if (user == null) {
         return res.status(400).send('Cannot find user')
     }

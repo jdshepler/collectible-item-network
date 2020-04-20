@@ -52,9 +52,12 @@ export default function SignIn() {
     const classes = useStyles();
 
     return (
-        <Container component="main" maxWidth="xs">
+        <Container component="main" maxWidth="sm">
             <CssBaseline />
-            <div className={classes.paper}>
+            <div className={classes.paper} style={{
+                background: 'linear-gradient(rgba(255,255,255, 1), rgba(255,255,255,.8))',
+                padding: '50px'
+            }}>
                 <Avatar className={classes.avatar}>
                     <LockOutlinedIcon />
                 </Avatar>
