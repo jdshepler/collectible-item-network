@@ -8,6 +8,8 @@ import SignUp from "./components/SignUp";
 import AddItem from "./components/AddItem";
 import './containers/App.css';
 import {Account} from "./components/Account";
+import Collection from "./components/Collection";
+import Item from "./components/Item";
 
 function App() {
     return (
@@ -21,6 +23,8 @@ function App() {
                     <Route path='/counter' component={Counter} />
                     <Route path='/additem' component={AddItem} />
                     <Route path='/account' component={Account} />
+                    <Route path='/collection' component={Collection} />
+                    <Route path='/item' component={Item} />
                 </Switch>
             </div>
         </Router>

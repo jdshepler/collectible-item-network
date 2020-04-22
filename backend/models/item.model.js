@@ -4,14 +4,14 @@ const Schema = mongoose.Schema;
 
 const itemSchema = new Schema(
     {
-        ItemID:
-            {
-                type: String,
-                required: true,
-                unique: true,
-                minlength: 4,
-                trim: true,
-            },
+        // ItemID:
+        //     {
+        //         type: String,
+        //         required: true,
+        //         unique: true,
+        //         minlength: 4,
+        //         trim: true,
+        //     },
         ItemName:
             {
                 type: String,
@@ -39,25 +39,25 @@ const itemSchema = new Schema(
         ItemDescription:
             {
                 type: String,
-                required: true,
+              //  required: true,
                 trim: true,
             },
         Price:
             {
                 type: Number,
-                required: true,
+              //  required: true,
                 trim: true,
             },
         SellerID:
             {
                 type: String,
-                required: true,
+               // required: true,
                 trim: true
             },
         SaleNum:
             {
                 type: Number,
-                required: true,
+                //required: true,
                 trim: true,
             },
     },

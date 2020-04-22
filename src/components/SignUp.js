@@ -167,7 +167,8 @@ export default class SignUp extends Component{
                                 fullWidth
                                 variant="contained"
                                 color="primary"
-                                style={{margin:'10px 0px'}}
+                                style={{margin:'10px 0px',
+                                    background: 'linear-gradient(rgba(146,146,146, 1), rgba(74,74,74, .8)'}}
                             >
                                 Sign Up
                             </Button>
@@ -181,14 +182,18 @@ export default class SignUp extends Component{
                         </form>
                     </PaperDiv>
                 <Box mt={5}>
-                    <Typography variant="body2" color="textSecondary" align="center">
-                        {'Copyright © '}
-                        <Link color="inherit" href="https://material-ui.com/">
-                            Collectible Item Network
-                        </Link>{' '}
-                        {new Date().getFullYear()}
-                        {'.'}
-                    </Typography>
+                    <Typography variant="body2" align="center" style={{
+                        color: 'gray',
+                    }}
+
+                    >
+                    {'Copyright © '}
+                    <Link color="inherit" href="https://material-ui.com/">
+                        Collectible Item Network
+                    </Link>{' '}
+                    {new Date().getFullYear()}
+                    {'.'}
+                </Typography>
                 </Box>
             </Container>
         );

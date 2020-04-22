@@ -17,7 +17,9 @@ import Container from '@material-ui/core/Container';
 
 function Copyright() {
     return (
-        <Typography variant="body2" color="textSecondary" align="center">
+        <Typography variant="body2" color="textSecondary" align="center" style={{
+                        color: 'gray',
+                    }}>
             {'Copyright © '}
             <Link color="inherit" href="https://material-ui.com/">
                 Collectible Item Network
@@ -37,7 +39,6 @@ const useStyles = makeStyles((theme) => ({
     },
     avatar: {
         margin: theme.spacing(1),
-        backgroundColor: theme.palette.secondary.main,
     },
     form: {
         width: '100%', // Fix IE 11 issue.
@@ -97,7 +98,8 @@ export default function SignIn() {
                         fullWidth
                         variant="contained"
                         color="primary"
-                        className={classes.submit}
+                        style={{margin:'10px 0px',
+                            background: 'linear-gradient(rgba(146,146,146, 1), rgba(74,74,74, .8)'}}
                     >
                         Sign In
                     </Button>

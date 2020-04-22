@@ -25,7 +25,7 @@ export class Home extends Component {
                 <ul>
                   <li><a href="https://nodejs.org/en/">Node.js</a> for the server framework</li>
                   <li><a href='https://facebook.github.io/react/'>React</a> for client-side code</li>
-                  <li><a href='http://getbootstrap.com/'>Material UI</a> for layout and styling</li>
+                  <li><a href='https://material-ui.com/'>Material UI</a> for layout and styling</li>
                   <li><a href="https://www.mongodb.com/">MongoDB</a> for database management</li>
                 </ul>
           </PaperDiv>

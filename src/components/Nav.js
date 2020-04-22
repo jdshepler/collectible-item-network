@@ -184,13 +184,16 @@ export default function PrimarySearchAppBar() {
                     {/*>*/}
                     {/*    <MenuIcon />*/}
                     {/*</IconButton>*/}
-                    <img
-                        src='https://i.imgur.com/qpwIWnA.png'
-                        width='35px'
-                        height='35px'
-                        style={{marginRight: '20px'}}
+                    <Link href={'/'}>
+                        <img
+                            src='https://i.imgur.com/qpwIWnA.png'
+                            width='35px'
+                            height='35px'
+                            style={{marginRight: '25px'}}
+                            alt='Logo'
 
-                    ></img>
+                        ></img>
+                    </Link>
                     <Link href={'/'}>
                         <Typography className={classes.title} variant="h6" style={{
                             color: 'white',
@@ -227,7 +230,9 @@ export default function PrimarySearchAppBar() {
                     <div className={classes.sectionDesktop}>
                         <IconButton aria-label="show 4 new mails" color="inherit">
                             <Badge badgeContent={4} color="secondary">
-                                <MailIcon />
+                                <Link href="/Account" >
+                                    <MailIcon style={{color: 'white'}}/>
+                                </Link>
                             </Badge>
                         </IconButton>
                         <IconButton aria-label="show 17 new notifications" color="inherit">

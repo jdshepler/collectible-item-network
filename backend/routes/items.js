@@ -8,15 +8,23 @@ router.route('/').get((req, res) => {
 });
 
 router.route('/add').post((req, res) => {
-    const ItemID = req.body.ItemID;
+    //const ItemID = req.body.ItemID;
     const ItemName = req.body.ItemName;
-    const Price = Number(req.body.Price);
+    const ItemManufacturer = req.body.ItemManufacturer;
+    const ItemModel = req.body.ItemModel;
+    const ProductionYear = req.body.ProductionYear;
+    const ItemDescription = req.body.ItemDescription;
+    const Price = req.body.Price;
     const SellerID = req.body.SellerID;
-    const SaleNum = Number(req.body.SaleNum);
+    const SaleNum = req.body.SaleNum;
 
     const newItem = new Item({
-        ItemID,
+       // ItemID,
         ItemName,
+        ItemManufacturer,
+        ItemModel,
+        ProductionYear,
+        ItemDescription,
         Price,
         SellerID,
         SaleNum,
