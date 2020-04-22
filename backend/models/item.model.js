@@ -18,6 +18,30 @@ const itemSchema = new Schema(
                 required: true,
                 trim: true,
             },
+        ItemManufacturer:
+            {
+                type: String,
+                required: true,
+                trim: true,
+            },
+        ItemModel:
+            {
+                type: String,
+                required: true,
+                trim: true,
+            },
+        ProductionYear:
+            {
+                type: String,
+                required: true,
+                trim: true,
+            },
+        ItemDescription:
+            {
+                type: String,
+                required: true,
+                trim: true,
+            },
         Price:
             {
                 type: Number,

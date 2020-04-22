@@ -56,7 +56,8 @@ export default function SignIn() {
             <CssBaseline />
             <div className={classes.paper} style={{
                 background: 'linear-gradient(rgba(255,255,255, 1), rgba(255,255,255,.8))',
-                padding: '50px'
+                padding: '50px',
+                borderRadius: '15px'
             }}>
                 <Avatar className={classes.avatar}>
                     <LockOutlinedIcon />

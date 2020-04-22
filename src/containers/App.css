@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+
 .container {
     background-image: linear-gradient(aquamarine 90%, white);
     height: 120px;
@@ -5,9 +7,9 @@
 
 
 body {
-    background-image: url("https://pixabay.com/get/57e2d1464d57a414ead9817dce2f3e7c1222dfe05b567548712d7ddc.jpg");
+    background-image: url("https://cdn.pixabay.com/photo/2016/03/09/09/22/store-1245758_960_720.jpg");
     background-repeat:no-repeat;
-    background-size: 100% ;
+    background-size: 1920px 1080px;
 }
 
 #brand {

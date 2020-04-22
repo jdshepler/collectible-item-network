@@ -8,7 +8,7 @@ import InputBase from '@material-ui/core/InputBase';
 import Badge from '@material-ui/core/Badge';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
-import MenuIcon from '@material-ui/icons/Menu';
+//import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
@@ -16,6 +16,7 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import AddCircleIcon from '@material-ui/icons/AddCircle';
 import Link from '@material-ui/core/Link';
+import '../containers/App.css';
 
 const useStyles = makeStyles((theme) => ({
     grow: {
@@ -171,7 +172,9 @@ export default function PrimarySearchAppBar() {
 
     return (
         <div className={classes.grow}>
-            <AppBar position="static">
+            <AppBar position="static" style={{
+                background: 'linear-gradient(rgba(74,74,74, 1), rgba(146,146,146,.8))'
+            }}>
                 <Toolbar>
                     {/*<IconButton*/}
                     {/*    edge="start"*/}
@@ -181,9 +184,21 @@ export default function PrimarySearchAppBar() {
                     {/*>*/}
                     {/*    <MenuIcon />*/}
                     {/*</IconButton>*/}
-                    <Typography className={classes.title} variant="h6" noWrap>
-                        Collectible Items Network
-                    </Typography>
+                    <img
+                        src='https://i.imgur.com/qpwIWnA.png'
+                        width='35px'
+                        height='35px'
+                        style={{marginRight: '20px'}}
+
+                    ></img>
+                    <Link href={'/'}>
+                        <Typography className={classes.title} variant="h6" style={{
+                            color: 'white',
+                            fontFamily: 'Montserrat'
+                        }} noWrap >
+                            Collectible Item Network
+                        </Typography>
+                    </Link>
                     <div className={classes.search}>
                         <div className={classes.searchIcon}>
                             <SearchIcon />

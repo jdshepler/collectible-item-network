@@ -80,11 +80,13 @@ export default class SignUp extends Component{
 
         const PaperDiv = styled.div`
             background: linear-gradient(rgba(255,255,255, 1), rgba(255,255,255,.8));
+            border-radius: 15px;
             margin: 30px;
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 50px;
+            box-shadow: 13px 15px 29px 5px rgba(0,0,0,0.55);
         `;
 
         return (

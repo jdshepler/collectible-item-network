@@ -7,6 +7,7 @@ import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import AddItem from "./components/AddItem";
 import './containers/App.css';
+import {Account} from "./components/Account";
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
                     <Route path='/sign-up' component={SignUp} />
                     <Route path='/counter' component={Counter} />
                     <Route path='/additem' component={AddItem} />
+                    <Route path='/account' component={Account} />
                 </Switch>
             </div>
         </Router>

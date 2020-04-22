@@ -25,7 +25,7 @@ const marketSchema = new Schema(
                 required: true,
                 trim: true,
             },
-        Description:
+        ListingDescription:
             {
                 type: String,
                 required: true,

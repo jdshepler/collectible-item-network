@@ -40,9 +40,10 @@
   "devDependencies": {
     "@material-ui/core": "^4.9.10",
     "@material-ui/icons": "^4.9.1",
-    "react-router-dom": "^5.1.2",
-    "styled-components": "latest",
     "axios": "latest",
-    "bcrypt": "latest"
+    "bcrypt": "latest",
+    "react-router-dom": "^5.1.2",
+    "react-router-transition": "^2.0.0",
+    "styled-components": "latest"
   }
 }
